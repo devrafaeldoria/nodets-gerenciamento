@@ -10,7 +10,7 @@ function openAndCloseNav() {
         arrow.classList.add('left');
 
         nav.style.display = 'block';
-        arrow.innerHTML = '<img src="assets/images/arrow-left.png" alt="">'
+        arrow.innerHTML = '<img src="/images/arrow-left.png" alt="">'
 
     } else {
         let nav = document.querySelector('nav');
@@ -21,7 +21,7 @@ function openAndCloseNav() {
         arrow.classList.add('right');
 
         nav.style.display = 'none';
-        arrow.innerHTML = '<img src="assets/images/arrow-right.png" alt="">';
+        arrow.innerHTML = '<img src="/images/arrow-right.png" alt="">';
     }
 };
 
