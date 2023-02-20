@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
+import { Employee } from '../models/Employees';
 
 export const empView = (req: Request, res: Response) => {
-    res.send('employees view');
+    res.render('pages/employeesView');
 }
 
 export const empAdd = (req: Request, res: Response) => {

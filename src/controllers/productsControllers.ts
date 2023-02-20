@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import { Product } from '../models/Products';
 
 export const productView = (req: Request, res: Response) => {
     res.send('product view');
