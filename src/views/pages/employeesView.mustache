@@ -12,20 +12,22 @@
                 <th>Cidade</th>
                 <th>Setor</th>
                 <th>Salário</th>
-            </tr>  
+            </tr>
+            {{#employees}}  
             <tr>
-                <td>1</td>
-                <td>Rafael</td>
-                <td>21</td>
-                <td>São Paulo</td>
-                <td>RH</td>
-                <td>R$1500,00</td>
+                <td>{{ id }}</td>
+                <td>{{ name }}</td>
+                <td>{{ age }}</td>
+                <td>{{ city }}</td>
+                <td>{{ sector }}</td>
+                <td>R${{ salary }}</td>
             </tr> 
+            {{/employees}}
         </table>
     </div>
     <div class="buttons">
-        <button>Voltar</button>
-        <button>Avançar</button>
+        <button><a href="/employees/view/previous">Voltar</a></button>
+        <button><a href="/employees/view/next">Avançar</a></button>
     </div>
 </section>
 

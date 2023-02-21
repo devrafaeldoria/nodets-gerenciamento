@@ -19,4 +19,7 @@ router.get('/products/search', ProductsControllers.productSearch);
 router.get('/products/modify', ProductsControllers.productModify);
 router.get('/products/remove', ProductsControllers.productRemove);
 
+router.get('/employees/view/next', EmployeesControllers.next);
+router.get('/employees/view/previous', EmployeesControllers.previous);
+
 export default router;
