@@ -9,8 +9,18 @@ export const empView = async (req: Request, res: Response) => {
         offset: offset,
         limit: 4
     });
-    res.render('pages/employeesView', {
-        employees
+
+    let show = false;
+
+    if(offset < 4) {
+        show = false;
+    } else {
+        show = true;
+    }
+
+    res.render('pages/employees/employeesView', {
+        employees,
+        show
     });
 }
 
@@ -35,15 +45,10 @@ export const next = async (req: Request, res: Response) => {
 
     offset = NextAndPrevious.next(offset, allEmployees.length);
 
-    console.log(offset);
-
     res.redirect('/employees/view');
 }
-
 export const previous = (req: Request, res: Response) => {
     offset = NextAndPrevious.previous(offset);
-
-    console.log(offset);
 
     res.redirect('/employees/view');
 }

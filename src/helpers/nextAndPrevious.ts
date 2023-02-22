@@ -9,5 +9,9 @@ export const next = (num: number, all: number) => {
 }
 
 export const previous = (num: number) => {
-    return num - 4;
+    if(num >= 4) {
+        return num - 4;
+    } else {
+        return num;
+    }
 }

@@ -22,4 +22,7 @@ router.get('/products/remove', ProductsControllers.productRemove);
 router.get('/employees/view/next', EmployeesControllers.next);
 router.get('/employees/view/previous', EmployeesControllers.previous);
 
+router.get('/products/view/next', ProductsControllers.next);
+router.get('/products/view/previous', ProductsControllers.previous);
+
 export default router;

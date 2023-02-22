@@ -11,21 +11,23 @@
                 <th>Stock</th>
                 <th>Min Stock</th>
                 <th>Price</th>
-                <th>Id Supplier</th>
             </tr>  
+            {{#products}}
             <tr>
-                <td>1</td>
-                <td>Rafael</td>
-                <td>21</td>
-                <td>São Paulo</td>
-                <td>RH</td>
-                <td>R$1500,00</td>
+                <td>{{ name }}</td>
+                <td>{{ supplier }}</td>
+                <td>{{ stock }}</td>
+                <td>{{ minimumstock }}</td>
+                <td>R${{ price }}</td>
             </tr> 
+            {{/products}}
         </table>
     </div>
     <div class="buttons">
-        <button>Voltar</button>
-        <button>Avançar</button>
+        {{#show}}
+        <button><a href="/products/view/previous">Voltar</a></button>
+        {{/show}}
+        <button><a href="/products/view/next">Avançar</a></button>
     </div>
 </section>
 
