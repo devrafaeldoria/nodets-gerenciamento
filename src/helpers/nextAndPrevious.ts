@@ -1,5 +1,3 @@
-import { Employee } from "../models/Employees";
-
 export const next = (num: number, all: number) => {
     if(num <= all) {
         return num + 4;

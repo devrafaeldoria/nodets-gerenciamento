@@ -91,3 +91,4 @@ document.querySelector('.arrow').addEventListener('click', openAndCloseNav);
 document.querySelectorAll('.menu-select').forEach((evn) => {
     evn.addEventListener('click', openAndCloseMenu);
 });
+

@@ -1,0 +1,38 @@
+{{>partials/header}}
+{{>partials/nav}}
+{{>partials/main}}
+
+
+<section class="add">
+    <div class="add-container">
+        <div class="add-title">
+            Add Employee
+        </div>
+        <div class="add-form">
+            <form method="POST" action="/employees/add/save">
+                <label>Name</label><br>
+                <input type="text" placeholder="Enter the employee's name" name="name" required>
+                <br><br>
+                <label>Date of birth<label><br>
+                <input type="date" placeholder="Enter the employee's name" id="date" name="date" required>
+                <br><br>
+                <label>City<label><br>
+                <input type="text" placeholder="Enter the employee's city" name="city" required>
+                <br><br>
+                <label>Sector<label><br>
+                <input type="text" placeholder="Enter the employee's sector" name="sector" required>
+                <br><br>
+                <label>Salary<label><br>
+                <input type="text" placeholder="Enter the employee's salary" name="salary" required>
+                <br><br>
+                <input class="btn-add" type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+</section>
+
+
+</div>
+</div>
+<script src="/js/script.js"></script>
+{{>partials/footer}}

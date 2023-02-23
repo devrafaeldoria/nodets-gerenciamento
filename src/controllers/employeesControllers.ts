@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { Employee } from '../models/Employees';
 import * as NextAndPrevious from '../helpers/nextAndPrevious';
+import { getAge } from '../helpers/getAge';
 
 let offset = 0;
 
@@ -25,7 +26,26 @@ export const empView = async (req: Request, res: Response) => {
 }
 
 export const empAdd = (req: Request, res: Response) => {
-    res.send('employees add');
+    res.render('pages/employees/employeesAdd');
+}
+export const empAddSave = async (req: Request, res: Response) => {
+    let date = req.body.date;
+    let name = req.body.name;
+    let city = req.body.city;
+    let sector = req.body.sector;
+    let salary = req.body.salary;
+
+    let employeeAge = getAge(date);
+
+    await Employee.create({
+        name,
+        age: employeeAge,
+        sector,
+        salary,
+        city
+    });
+
+    res.redirect('/employees/add');
 }
 
 export const empSearch = (req: Request, res: Response) => {

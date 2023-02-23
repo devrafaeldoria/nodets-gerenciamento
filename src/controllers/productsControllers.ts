@@ -25,7 +25,25 @@ export const productView = async (req: Request, res: Response) => {
 }
 
 export const productAdd = (req: Request, res: Response) => {
-    res.send('product add');
+    res.render('pages/products/productsAdd');
+}
+export const productAddSave = async (req: Request, res: Response) => {
+    let name = req.body.name;
+    let supplier = req.body.supplier;
+    let stock = req.body.stock;
+    let minimumstock = req.body.minimumstock;
+    let price = req.body.price;
+
+
+    await Product.create({
+        name,
+        supplier,
+        stock,
+        minimumstock,
+        price
+    });
+
+    res.redirect('/products/add');
 }
 
 export const productSearch = (req: Request, res: Response) => {

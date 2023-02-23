@@ -7,8 +7,7 @@ export interface ProductsInterface extends Model {
     supplier: string,
     stock: number,
     minimumstock: number,
-    price: number,
-    id_supplier: number
+    price: number
 }
 
 export const Product = sequelize.define<ProductsInterface>('Products', {
@@ -34,10 +33,6 @@ export const Product = sequelize.define<ProductsInterface>('Products', {
         allowNull: false
     },
     price: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
-    id_supplier: {
         type: DataTypes.INTEGER,
         allowNull: false
     }

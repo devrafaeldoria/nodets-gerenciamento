@@ -1,0 +1,38 @@
+{{>partials/header}}
+{{>partials/nav}}
+{{>partials/main}}
+
+
+<section class="add">
+    <div class="add-container">
+        <div class="add-title">
+            Add Product
+        </div>
+        <div class="add-form">
+            <form method="POST" action="/products/add/save">
+                <label>Name</label><br>
+                <input type="text" placeholder="Enter the product's name" name="name" required>
+                <br><br>
+                <label>Supplier<label><br>
+                <input type="text" placeholder="Enter the supplier's name" name="supplier" required>
+                <br><br>
+                <label>Stock<label><br>
+                <input type="number" placeholder="Enter the stock" name="stock" required>
+                <br><br>
+                <label>Minimum Stock<label><br>
+                <input type="number" placeholder="Enter the minimum stock" name="minimumstock" required>
+                <br><br>
+                <label>Price<label><br>
+                <input type="text" placeholder="Enter the product's price" name="price" required>
+                <br><br>
+                <input class="btn-add" type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+</section>
+
+
+</div>
+</div>
+<script src="/js/script.js"></script>
+{{>partials/footer}}
