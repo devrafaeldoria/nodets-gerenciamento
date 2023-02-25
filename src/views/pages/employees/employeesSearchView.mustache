@@ -1,0 +1,37 @@
+{{>partials/header}}
+{{>partials/nav}}
+{{>partials/main}}
+
+<section class="see-all">
+    <div class="all">
+        <table>
+            <tr>
+                <th>Matrículas</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Cidade</th>
+                <th>Setor</th>
+                <th>Salário</th>
+            </tr>
+            {{#searchEmployees}}  
+            <tr>
+                <td>{{ id }}</td>
+                <td>{{ name }}</td>
+                <td>{{ age }}</td>
+                <td>{{ city }}</td>
+                <td>{{ sector }}</td>
+                <td>R${{ salary }}</td>
+            </tr> 
+            {{/searchEmployees}}
+        </table>
+    </div>
+    <div class="buttons">
+        <button><a href="/employees/search">Voltar</a></button>
+    </div>
+</section>
+
+</div>
+</div>
+<script src="/js/script.js"></script>
+
+{{>partials/footer}}

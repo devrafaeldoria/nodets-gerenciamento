@@ -47,7 +47,57 @@ export const productAddSave = async (req: Request, res: Response) => {
 }
 
 export const productSearch = (req: Request, res: Response) => {
-    res.send('product search');
+    res.render('pages/products/productsSearch');
+}
+export const productSearchSave = async (req: Request, res: Response) => {
+    let searchProducts;
+
+    switch(req.body.choice) {
+        case 'Name': 
+            searchProducts = await Product.findAll({
+                where: {
+                    name: req.body.value
+                },
+                limit: 4
+            });
+            break;
+        case 'Supplier':
+            searchProducts = await Product.findAll({
+                where: {
+                    supplier: req.body.value
+                },
+                limit: 4
+            });
+            break;
+        case 'Stock':
+            searchProducts = await Product.findAll({
+                where: {
+                    stock: req.body.value
+                },
+                limit: 4
+            });
+            break;
+        case 'Minimum Stock': 
+            searchProducts = await Product.findAll({
+                where: {
+                    minimumstock: req.body.value
+                },
+                limit: 4
+            });
+            break;
+        case 'Price':
+            searchProducts = await Product.findAll({
+                where: {
+                    price: req.body.value
+                },
+                limit: 4
+            });
+            break;
+    }
+
+    res.render('pages/products/productsSearchView', {
+        searchProducts
+    });
 }
 
 export const productModify = (req: Request, res: Response) => {

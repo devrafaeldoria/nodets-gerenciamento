@@ -1,0 +1,37 @@
+{{>partials/header}}
+{{>partials/nav}}
+{{>partials/main}}
+
+<section class="see-all">
+    <div class="all">
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Supplier</th>
+                <th>Stock</th>
+                <th>Minimum Stock</th>
+                <th>Price</th>
+            </tr>
+            {{#searchProducts}}  
+            <tr>
+                <td>{{ id }}</td>
+                <td>{{ name }}</td>
+                <td>{{ supplier }}</td>
+                <td>{{ stock }}</td>
+                <td>{{ minimumstock }}</td>
+                <td>R${{ price }}</td>
+            </tr> 
+            {{/searchProducts}}
+        </table>
+    </div>
+    <div class="buttons">
+        <button><a href="/products/search">Voltar</a></button>
+    </div>
+</section>
+
+</div>
+</div>
+<script src="/js/script.js"></script>
+
+{{>partials/footer}}

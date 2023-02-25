@@ -14,6 +14,7 @@ router.get('/employees/modify', EmployeesControllers.empModify);
 router.get('/employees/remove', EmployeesControllers.empRemove);
 
 router.post('/employees/add/save', EmployeesControllers.empAddSave);
+router.post('/employees/search/save', EmployeesControllers.empSearchSave);
 
 router.get('/products/view', ProductsControllers.productView);
 router.get('/products/add', ProductsControllers.productAdd);
@@ -22,6 +23,7 @@ router.get('/products/modify', ProductsControllers.productModify);
 router.get('/products/remove', ProductsControllers.productRemove);
 
 router.post('/products/add/save', ProductsControllers.productAddSave);
+router.post('/products/search/save', ProductsControllers.productSearchSave);
 
 router.get('/employees/view/next', EmployeesControllers.next);
 router.get('/employees/view/previous', EmployeesControllers.previous);
